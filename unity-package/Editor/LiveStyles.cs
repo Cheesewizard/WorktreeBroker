@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 namespace WorktreeBroker.Editor
 {
 	/// <summary>
-	/// Live stylesheet reload for the shared editor (the broker README, "UI live reload").
+	/// Live stylesheet reload for the shared editor (docs/live-reload.md).
 	///
 	/// <see cref="Apply"/> compiles a USS file's text (from this checkout or any worktree) into the project's existing
 	/// StyleSheet of the same asset path, in memory, and restyles every panel. Nothing is written to the project: the

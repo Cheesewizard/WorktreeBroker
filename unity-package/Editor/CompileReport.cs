@@ -11,8 +11,8 @@ namespace WorktreeBroker.Editor
 	/// <summary>
 	/// Writes the shared editor's last compile result to Library/WorktreeBroker/compile-status.json, so the Unity
 	/// Worktree Broker can tell every chat (and the dashboard) when the main checkout doesn't compile and which files
-	/// break it (the broker README, "Compile status"). One chat's unfinished file used to block everyone
-	/// silently: each chat found the errors on its own and guessed whose they were.
+	/// break it (docs/shared-editor.md, "Compile status"). Without it, one chat's unfinished file blocks everyone
+	/// silently: each chat finds the errors on its own and guesses whose they are.
 	/// Format: {"time": epoch s, "ok": bool, "errors": [{"file", "line", "message", "assembly"}]}, at most 200 errors.
 	/// </summary>
 	[InitializeOnLoad]

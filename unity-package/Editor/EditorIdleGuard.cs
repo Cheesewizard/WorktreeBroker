@@ -8,7 +8,7 @@ namespace WorktreeBroker.Editor
 {
 	/// <summary>
 	/// Stops Play mode that was left running, so the shared editor is free to compile and import again
-	/// (the broker README, "Editor guard"). An agent polling a stuck capture can otherwise hold Play mode for half an hour
+	/// (docs/shared-editor.md, "Editor guard"). An agent polling a stuck capture can otherwise hold Play mode for half an hour
 	/// while compiles wait behind it.
 	///
 	/// It acts only while nobody is at the editor (the editor window has not been focused for the whole wait):

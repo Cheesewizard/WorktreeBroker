@@ -4,7 +4,7 @@ This prototype patches a copied Windows Mono player of the project. It loads one
 match. A small Cecil tool (`PreparePlayer.cs`) inserts a call to a bridge at the start of one of the game's own
 per-frame methods. Preparing a copy needs a .NET SDK and Unity's `Unity.Cecil.dll`, and runs without an editor.
 
-Everything game-specific comes from `project.json`'s `player` section (see the broker README, "Project configuration"):
+Everything game-specific comes from `project.json`'s `player` section (see [Project configuration](../docs/configuration.md#project-configuration)):
 
 | Key | Meaning |
 | --- | --- |
