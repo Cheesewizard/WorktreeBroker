@@ -5,7 +5,7 @@ AI coding chats, each in its own git worktree of one Unity project, share **one*
 each other's way. Only the main checkout opens Unity. Each worktree chat gets a narrow, locked set of tools that check
 and show its work in that editor, and nothing it does there writes to the main checkout's files.
 
-Status: 0.1.0, the first public release. Tested on Windows 11 with Unity 6000.4. Expect rough edges on other setups.
+Status: 0.1.0, the first public release. Tested on Windows 11 with Unity 6000.4. Possibly rough edges on other setups
 
 <img width="2560" height="1528" alt="pythonw_W7ONZ1b7sF" src="https://github.com/user-attachments/assets/d4783b55-772d-4336-8941-9484415229e6" />
 
