@@ -1,0 +1,73 @@
+{
+  "name": "MyGame",
+  "mcp_server": "unity_broker",
+  "unity_mcp": {
+    "server": "mcpforunityserver==10.3.0",
+    "direct_server": "unityMCP"
+  },
+  "verify": {
+    "default": "compile",
+    "checks": {
+      "compile": {
+        "description": "EXAMPLE, bring your own: a script that compiles the worktree's assemblies outside the editor and prints 'ok   <assembly>' / 'FAIL <assembly>' lines (README, 'Bring your own compile check'). Skipped while the script is missing.",
+        "parser": "unity-compile-check",
+        "steps": [
+          {
+            "command": [
+              "python",
+              "{main}/tools/compile_check.py"
+            ],
+            "env": {
+              "COMPILE_REPO": "{worktree}",
+              "COMPILE_GEN": "{work}/gen"
+            },
+            "requires": [
+              "{main}/tools/compile_check.py"
+            ]
+          }
+        ]
+      },
+      "tests": {
+        "description": "dotnet tests; pass test_filter to run a slice",
+        "parser": "dotnet-test",
+        "steps": [
+          {
+            "command": [
+              "dotnet",
+              "test",
+              "Tests/Tests.csproj",
+              "--nologo"
+            ],
+            "filter_args": [
+              "--filter",
+              "{filter}"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "player": {
+    "executable": "MyGame.exe",
+    "description": "a visible automated match",
+    "arguments": [
+      "-screen-fullscreen",
+      "0",
+      "-screen-width",
+      "960",
+      "-screen-height",
+      "540"
+    ],
+    "host_arguments": [
+      "-port",
+      "{port}"
+    ],
+    "ready_marker": "Match started"
+  },
+  "process_names": {
+    "players": [
+      "MyGame.exe"
+    ]
+  },
+  "lease_idle_minutes": 5
+}

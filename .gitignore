@@ -1,0 +1,12 @@
+__pycache__/
+.runs/
+.sessions/
+.controls/
+.sync/
+bin/
+obj/
+# Local config (install.py config writes them; templates: *.example.json).
+routes.json
+project.json
+.pytest_cache/
+.python-path

@@ -1,0 +1,20 @@
+{
+	"name": "WorktreeBroker.Runtime",
+	"rootNamespace": "WorktreeBroker",
+	"references": ["Unity.Pipeline", "Unity.Pipeline.Attributes"],
+	"includePlatforms": [],
+	"excludePlatforms": [],
+	"allowUnsafeCode": false,
+	"overrideReferences": false,
+	"precompiledReferences": [],
+	"autoReferenced": true,
+	"defineConstraints": [],
+	"versionDefines": [
+		{
+			"name": "com.unity.pipeline",
+			"expression": "0.10.0-exp.1",
+			"define": "WORKTREE_BROKER_PIPELINE"
+		}
+	],
+	"noEngineReferences": false
+}

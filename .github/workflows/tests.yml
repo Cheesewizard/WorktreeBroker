@@ -1,0 +1,25 @@
+# Windows CI for the broker's own repository (the broker is Windows only). Inside another repository this file is inert:
+# GitHub only reads workflows from the repository root's .github/workflows.
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: python -m pip install -r requirements.txt pytest
+      - name: Compile every module
+        run: python -m compileall -q .
+      - name: Tests
+        run: python -m pytest -q

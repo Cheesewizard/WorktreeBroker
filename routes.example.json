@@ -1,0 +1,20 @@
+[
+  {
+    "name": "main",
+    "kind": "editor",
+    "worktree": "C:/Projects/MyGame",
+    "development_branch": "development"
+  },
+  {
+    "name": "ui",
+    "kind": "source",
+    "worktree": "C:/Projects/MyGame-ui"
+  },
+  {
+    "name": "bot",
+    "kind": "player",
+    "worktree": "C:/Projects/MyGame-bot",
+    "player": "Builds/MyGame.exe",
+    "port": 48979
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "com.worktreebroker.unity",
+  "version": "0.1.0",
+  "displayName": "Worktree Broker for Unity",
+  "description": "Editor side of the Worktree Broker for Unity: compile reports, live stylesheet and view reload, off-screen captures with layout facts, and an idle Play mode guard, so many AI chats in their own git worktrees can share one Unity editor.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Cheesewizard",
+    "email": "cheesewizard.dev@outlook.com",
+    "url": "https://github.com/Cheesewizard/WorktreeBroker"
+  },
+  "keywords": [
+    "mcp",
+    "worktree",
+    "ai",
+    "live reload",
+    "ui toolkit"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cheesewizard/WorktreeBroker.git"
+  },
+  "documentationUrl": "https://github.com/Cheesewizard/WorktreeBroker#readme"
+}
